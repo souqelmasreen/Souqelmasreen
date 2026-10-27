@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b5121b">
+<title>سوق المصريين | منصة التجار</title>
+<style>
+:root{--red:#b5121b;--dark:#171717;--muted:#686868;--line:#ececec;--bg:#f7f7f8;--green:#17834b}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--dark);line-height:1.7}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:4}
+.top{max-width:1100px;margin:auto;padding:10px 16px;display:flex;align-items:center;gap:12px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:bold}.brand img{width:54px;height:54px;object-fit:contain;border-radius:8px}.brand span{font-size:17px}
+nav{display:flex;gap:8px;flex-wrap:wrap}button,.btn{border:0;border-radius:10px;padding:10px 14px;background:var(--red);color:white;font-weight:bold;cursor:pointer;font-size:14px;text-decoration:none}
+button.secondary,.btn.secondary{background:#f1f1f1;color:#222}button.outline{background:white;border:1px solid var(--line);color:#222}
+main{max-width:1100px;margin:22px auto;padding:0 16px}.hero{background:linear-gradient(120deg,#9d1018,#d52b33);color:white;padding:30px 24px;border-radius:20px;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:center}
+.hero h1{font-size:clamp(25px,4vw,40px);line-height:1.35;margin:0 0 10px}.hero p{margin:0 0 18px;color:#ffe9e9}.hero .btn{background:#fff;color:var(--red);display:inline-block}.hero .btn.secondary{background:#781018;color:#fff;margin-right:6px}
+.hero-mark{background:#fff;border-radius:18px;padding:12px;max-width:230px;margin:auto}.hero-mark img{width:100%;display:block;object-fit:contain}
+.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:26px 0 12px}.section-title h2{font-size:21px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.card h3{margin:0 0 6px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}.symbol{width:42px;height:42px;background:#fff0f0;color:var(--red);border-radius:12px;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.badge{display:inline-block;border-radius:999px;background:#fff0d7;color:#8b5200;padding:3px 9px;font-size:12px}.badge.green{background:#e1f6e9;color:#126b3d}.badge.gray{background:#eee;color:#555}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.panel{display:none}.panel.active{display:block}.formbox{max-width:720px;margin:auto}.field{margin:12px 0}.field label{display:block;font-weight:bold;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;background:white;font:inherit}.field textarea{min-height:95px;resize:vertical}.hint{font-size:12px;color:var(--muted)}.notice{padding:12px 14px;background:#fff8e8;border:1px solid #f2e2b8;border-radius:12px;margin:12px 0;font-size:13px}
+.list{display:grid;gap:12px}.item{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border:1px solid var(--line);padding:14px;border-radius:12px;background:#fff}.item p{margin:3px 0;color:var(--muted);font-size:13px}.empty{padding:26px;text-align:center;color:var(--muted);background:white;border-radius:14px;border:1px dashed #ddd}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:25px 15px}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding:24px 18px}.hero-mark{max-width:125px;grid-row:1}.grid{grid-template-columns:1fr}.top{align-items:flex-start}.brand span{font-size:14px}nav button{padding:8px 10px;font-size:12px}.item{flex-direction:column}.section-title{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="top">
+  <div class="brand"><img src="assets/souq-elmasreen-logo.jpg" alt="لوجو سوق المصريين"><span>سوق المصريين<br><small style="font-weight:normal;color:#777">منصة التجار والإعلانات</small></span></div>
+  <nav>
+    <button class="secondary" onclick="showPanel('home')">الرئيسية</button>
+    <button class="secondary" onclick="showPanel('merchant')">حساب التاجر</button>
+    <button class="secondary" onclick="showPanel('admin')">لوحة الإدارة التجريبية</button>
+  </nav>
+</div></header>
+<main>
+<section id="home" class="panel active">
+  <div class="hero">
+    <div><h1>خلّي تجارتك توصل لعملاء أكتر</h1><p>منصة سوق المصريين لعرض المنتجات والخدمات وطلب الحملات الإعلانية للتجار في مصر.</p>
+      <a href="#" class="btn" onclick="showPanel('adform');return false">أضف إعلانك مجانًا</a>
+      <a href="#" class="btn secondary" onclick="showPanel('paid');return false">اطلب إعلانًا مدفوعًا</a>
+    </div>
+    <div class="hero-mark"><img src="assets/souq-elmasreen-logo.jpg" alt="شعار الشركة"></div>
+  </div>
+  <div class="section-title"><h2>ابدأ من هنا</h2><span class="badge green">نسخة تصميم أولية</span></div>
+  <div class="grid">
+    <div class="card"><div class="symbol">🛍️</div><h3>منتجات وبضائع</h3><p>اعرض منتجات متجرك وصور البضائع وبيانات التواصل.</p><div class="actions"><button onclick="showPanel('adform')">إضافة منتج</button></div></div>
+    <div class="card"><div class="symbol">🧰</div><h3>خدمات وأعمال</h3><p>عرّف العملاء بخدمات شركتك أو محلك وتخصصك.</p><div class="actions"><button onclick="showPanel('adform')">إضافة خدمة</button></div></div>
+    <div class="card"><div class="symbol">📣</div><h3>الإعلانات المدفوعة</h3><p>اختَر باقة إعلانية وابعث تفاصيل حملتك لفريق سوق المصريين.</p><div class="actions"><button onclick="showPanel('paid')">عرض طلب إعلان</button></div></div>
+  </div>
+  <div class="section-title"><h2>كيف تعمل المنصة؟</h2></div>
+  <div class="grid">
+    <div class="card"><h3>١. سجّل بيانات إعلانك</h3><p>اكتب اسم النشاط والتصنيف والوصف ووسيلة التواصل.</p></div>
+    <div class="card"><h3>٢. مراجعة الإدارة</h3><p>الإعلانات المجانية تظل قيد المراجعة قبل ظهورها للعامة.</p></div>
+    <div class="card"><h3>٣. تابع طلبك</h3><p>طلبات الإعلانات المدفوعة تحتاج تأكيد الباقة والدفع قبل التنفيذ.</p></div>
+  </div>
+</section>
+
+<section id="adform" class="panel">
+  <div class="card formbox"><h2>إضافة إعلان مجاني</h2><div class="notice">سيتم إرسال الإعلان للمراجعة، ولن يظهر للعامة قبل موافقة الإدارة. هذه نسخة تجريبية تحفظ البيانات على نفس الجهاز فقط.</div>
+    <form id="adForm">
+      <div class="field"><label>اسم النشاط التجاري</label><input name="business" required placeholder="مثال: محل الأمل"></div>
+      <div class="field"><label>نوع الإعلان</label><select name="kind"><option>منتج</option><option>خدمة</option></select></div>
+      <div class="field"><label>عنوان الإعلان</label><input name="title" required placeholder="اكتب عنوانًا واضحًا"></div>
+      <div class="field"><label>وصف الإعلان</label><textarea name="description" required placeholder="اكتب تفاصيل المنتج أو الخدمة"></textarea></div>
+      <div class="field"><label>رقم التواصل</label><input name="phone" required inputmode="tel" placeholder="01xxxxxxxxx"></div>
+      <div class="field"><label>اسم صاحب الإعلان / التاجر</label><input name="owner" required placeholder="الاسم"></div>
+      <button type="submit">إرسال للمراجعة</button> <button type="button" class="secondary" onclick="showPanel('home')">رجوع</button>
+    </form>
+  </div>
+</section>
+
+<section id="paid" class="panel">
+  <div class="card formbox"><h2>طلب إعلان مدفوع</h2><div class="notice">الأسعار ووسائل الدفع النهائية تُضاف بعد اعتمادها. لا يتم تحصيل أي مبلغ من هذه النسخة التجريبية.</div>
+    <form id="paidForm">
+      <div class="field"><label>اسم التاجر أو الشركة</label><input name="merchant" required></div>
+      <div class="field"><label>رقم التواصل</label><input name="phone" required inputmode="tel"></div>
+      <div class="field"><label>الخدمة المطلوبة</label><select name="package"><option>إعلان تيليجرام</option><option>تيليجرام + فيسبوك</option><option>تيليجرام + فيسبوك + إنستجرام</option><option>تيليجرام + فيسبوك + إنستجرام + تيك توك</option><option>خدمة أخرى</option></select></div>
+      <div class="field"><label>طريقة استكمال الطلب</label><select name="payment"><option>التواصل مع الإدارة لتأكيد الطلب والدفع</option><option>أرغب في الدفع الإلكتروني عند توفره</option></select></div>
+      <div class="field"><label>تفاصيل الإعلان</label><textarea name="details" placeholder="المنتج، الجمهور، المدة، وأي تفاصيل مهمة"></textarea></div>
+      <button type="submit">إرسال طلب الباقة</button> <button type="button" class="secondary" onclick="showPanel('home')">رجوع</button>
+    </form>
+  </div>
+</section>
+
+<section id="merchant" class="panel">
+  <div class="card formbox"><h2>مساحة التاجر — نموذج تجريبي</h2><div class="notice">تسجيل الدخول الحقيقي وحماية الحسابات ستتم في مرحلة ربط الخادم وقاعدة البيانات. لا تدخل كلمات مرور حقيقية في هذه النسخة.</div>
+    <div class="field"><label>بريد إلكتروني تجريبي</label><input id="demoEmail" type="email" placeholder="name@example.com"></div>
+    <div class="actions"><button onclick="showMerchantItems()">عرض طلباتي التجريبية</button><button class="secondary" onclick="showPanel('adform')">إضافة إعلان</button><button class="secondary" onclick="showPanel('paid')">طلب إعلان مدفوع</button></div>
+    <div id="merchantItems" class="list" style="margin-top:16px"></div>
+  </div>
+</section>
+
+<section id="admin" class="panel">
+  <div class="card"><h2>لوحة الإدارة — نموذج تجريبي</h2><div class="notice">هذه اللوحة للعرض والتجربة فقط وليست محمية بتسجيل دخول إداري. البيانات محفوظة في متصفح هذا الجهاز، وليست قاعدة بيانات مشتركة.</div>
+    <div class="section-title"><h3>الإعلانات المجانية</h3><button class="secondary" onclick="renderAdmin()">تحديث</button></div><div id="adminAds" class="list"></div>
+    <div class="section-title"><h3>طلبات الإعلانات المدفوعة</h3></div><div id="adminPaid" class="list"></div>
+  </div>
+</section>
+</main>
+<footer>سوق المصريين © — نموذج واجهة أولي غير متصل بخادم أو بوابة دفع.</footer>
+<script>
+const get=(k)=>JSON.parse(localStorage.getItem(k)||'[]');const put=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
+function showPanel(id){document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');if(id==='admin')renderAdmin();window.scrollTo({top:0,behavior:'smooth'})}
+document.getElementById('adForm').addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));const all=get('ads');all.unshift({...d,id:Date.now(),status:'قيد المراجعة',created:new Date().toLocaleDateString('ar-EG')});put('ads',all);e.target.reset();alert('تم حفظ الإعلان في النسخة التجريبية وإرساله للمراجعة على هذا الجهاز.');showPanel('admin')});
+document.getElementById('paidForm').addEventListener('submit',e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));const all=get('paid');all.unshift({...d,id:Date.now(),status:'بانتظار تأكيد الإدارة',created:new Date().toLocaleDateString('ar-EG')});put('paid',all);e.target.reset();alert('تم حفظ الطلب التجريبي على هذا الجهاز فقط. لا يوجد دفع فعلي في هذه النسخة.');showPanel('admin')});
+function renderAdmin(){let ads=get('ads'),paid=get('paid');document.getElementById('adminAds').innerHTML=ads.length?ads.map(a=>`<div class="item"><div><b>${esc(a.title)}</b><p>${esc(a.business)} • ${esc(a.kind)} • ${esc(a.phone)}</p><p>${esc(a.description)}</p><span class="badge">${esc(a.status)}</span></div><div class="actions"><button onclick="setAd(${a.id},'مقبول')">موافقة</button><button class="secondary" onclick="setAd(${a.id},'مرفوض')">رفض</button></div></div>`).join(''):'<div class="empty">لسه مفيش إعلانات مقدمة.</div>';
+document.getElementById('adminPaid').innerHTML=paid.length?paid.map(a=>`<div class="item"><div><b>${esc(a.package)}</b><p>${esc(a.merchant)} • ${esc(a.phone)}</p><p>${esc(a.payment)}</p><span class="badge">${esc(a.status)}</span></div><button onclick="setPaid(${a.id})">تأكيد الاستلام/المراجعة</button></div>`).join(''):'<div class="empty">لسه مفيش طلبات مدفوعة.</div>'}
+function setAd(id,status){let a=get('ads');a=a.map(x=>x.id===id?{...x,status}:x);put('ads',a);renderAdmin()}
+function setPaid(id){let a=get('paid');a=a.map(x=>x.id===id?{...x,status:'تمت المراجعة — متابعة الدفع'}:x);put('paid',a);renderAdmin()}
+function showMerchantItems(){let ads=get('ads'),paid=get('paid');document.getElementById('merchantItems').innerHTML=[...ads.map(a=>`<div class="item"><div><b>${esc(a.title)}</b><p>إعلان مجاني — ${esc(a.status)}</p></div></div>`),...paid.map(a=>`<div class="item"><div><b>${esc(a.package)}</b><p>طلب مدفوع — ${esc(a.status)}</p></div></div>`)].join('')||'<div class="empty">لا توجد طلبات تجريبية بعد.</div>'}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+</script>
+</body></html>
